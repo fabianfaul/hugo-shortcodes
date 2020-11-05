@@ -1,0 +1,10 @@
+{{- $id := .Get "id" -}}
+
+<div class="audio">
+  <audio id="{{$id}}" class="audio-player" preload="auto" tabindex="0" controls="">
+    Sorry, your browser does not support HTML5 audio.
+  </audio>
+  <ul class="audio-playlist">
+    {{ replace .Inner "playerID" $id | safeHTML }}
+  </ul>
+</div>

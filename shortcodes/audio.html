@@ -1,0 +1,25 @@
+{{- $title := .Get "title" -}}
+{{- $ogg := .Get "ogg" -}}
+{{- $mp3 := .Get "mp3" -}}
+{{- $wav := .Get "wav" -}}
+{{- $file := "" -}}
+
+{{- with .Parent -}}
+  {{ if ne $ogg "" }}
+    {{$file = $ogg}}
+  {{ else }}
+    {{ if ne $mp3 "" }}
+      {{$file = $mp3}}
+    {{ else }}
+      {{$file = $wav}}
+    {{ end }}
+  {{ end }}
+  <li class="audio-playlist-entry"><a href="javascript:playAudio('playerID', '{{$file}}');" class="audio-play"><img src="/icons/icon-play.png" alt="play" class="icons"></a><a href="{{$file}}" class="audio-download"><img src="/icons/icon-download.png" alt="download" class="icons"></a> <span>{{$title}}</span></li>
+{{- else -}}
+  <audio class="audio-player" controls {{ with .Get "preload" }}preload="{{.}}"{{ end }}>
+    {{ with $ogg }}<source src="{{.}}" type="audio/ogg">{{ end }}
+    {{ with $mp3 }}<source src="{{.}}" type="audio/mpeg">{{ end }}
+    {{ with $wav }}<source src="{{.}}" type="audio/wav">{{ end }}
+    Your browser does not support the audio element.
+  </audio>
+{{- end }}

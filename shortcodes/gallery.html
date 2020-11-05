@@ -1,0 +1,11 @@
+{{- $id := .Get "id" -}}
+
+<div class="img-row">
+  {{ replace .Inner "galleryID" $id | safeHTML }}
+</div>
+
+<div class="img-container">
+  <span onclick="this.parentElement.style.display='none'" class="img-closebtn">&times;</span>
+  <img id="{{$id}}-expanded" class="img-expanded" style="width:100%">
+  <div id="{{$id}}-expanded-imgtext" class="img-expanded-imgtext"></div>
+</div>

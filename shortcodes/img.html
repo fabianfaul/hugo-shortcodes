@@ -1,0 +1,12 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $caption := .Get "caption" -}}
+
+{{- with .Parent -}}
+  <div class="img-column">
+    <img src="{{$src}}" alt="{{$alt}}" onclick="expandImage('galleryID', this);">
+    {{ if ne $caption "" }}<div class="img-imgtext">{{ if eq $caption "show" }}{{$alt}}{{ else }}{{$caption}}{{ end }}</div>{{ end }}
+  </div>
+{{- else -}}
+  <img src="{{$src}}" alt="{{$alt}}">
+{{- end }}

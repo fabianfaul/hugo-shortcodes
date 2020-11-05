@@ -1,0 +1,47 @@
+div.audio {
+  padding: 5px;
+  width: 100%;
+}
+
+audio.audio-player {
+  width: 100%;
+}
+
+ul.audio-playlist {
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  width: 100%;
+}
+
+ul.audio-playlist li {
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+ul.audio-playlist li:nth-child(even) {
+  background: #eeeef9;
+}
+
+ul.audio-playlist li:nth-child(odd) {
+  background: #d9d9e9;
+}
+
+ul.audio-playlist li.active {
+  color: #fff;
+  background: #444;
+}
+
+div.audio a,
+div.audio a:hover,
+div.audio a img.icons {
+  vertical-align: middle;
+  text-decoration: none;
+  border: 0;
+}
+
+.icons {
+  height: 1.1em;
+  margin: 0 3px;
+  vertical-align: middle;
+}
