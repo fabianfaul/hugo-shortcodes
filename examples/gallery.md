@@ -8,7 +8,7 @@ js: /js/shortcodes.js
 ---
 
 Include a single image.
-{{< img src="http://files.faullab.com/testfiles/images/img01_1024x768.jpg" alt="Small diaphragm condenser microphones included in the test" caption="C" >}}
+{{< img src="http://files.faullab.com/testfiles/images/img01_1024x768.jpg" alt="Brandenburg Gate" caption="C" >}}
 
 Include a gallery with three images.
 {{< gallery id="imagegallery" >}}

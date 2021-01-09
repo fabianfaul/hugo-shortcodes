@@ -1,0 +1,5 @@
+{{- $nocols := .Get 0 -}}
+
+<div class="column-{{$nocols}}">
+  {{ .Inner | safeHTML }}
+</div>
