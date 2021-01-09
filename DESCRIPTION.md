@@ -82,3 +82,17 @@ This parameter tells the browser whether to load the files when loading the page
   {{< audio wav="path_to_file02.wav" title="Audio 03" preload="none" >}}
 {{< /playlist >}}
 ```
+
+
+### `accordion`
+`accordion` includes a single collapsible text area that can be used e.g. for FAQs.
+
+#### Parameters
+There is only one unnamed parameter which is the title of the accordion, i.e. the text or question that is shown when the text field is closed.
+
+#### Example
+```
+{{< accordion "title or question" >}}
+  full text
+{{< /accordion >}}
+```
