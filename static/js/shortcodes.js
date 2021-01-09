@@ -6,5 +6,6 @@ function include(file) {
   document.getElementsByTagName('head').item(0).appendChild(script);
 }
 
+include('/js/shortcode-accordion.js');
 include('/js/shortcode-gallery.js');
 include('/js/shortcode-playlist.js');

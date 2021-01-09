@@ -1,0 +1,37 @@
+/* adapted from https://www.w3schools.com/howto/howto_js_accordion.asp */
+
+.accordion-title {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  color: #444;
+  background-color: #eee;
+}
+
+.accordion-title:after {
+  content: '\02795';
+  font-size: 0.8em;
+  float: right;
+  padding: 0.1em 0;
+  margin-left: 5px;
+  color: #ddd;
+}
+
+.accordion-active:after {
+  content: "\2796";
+}
+
+.accordion-active, .accordion-title:hover {
+  background-color: #ccc;
+}
+
+.accordion-panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+}

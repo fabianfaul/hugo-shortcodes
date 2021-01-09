@@ -1,0 +1,8 @@
+{{- $title := .Get 0 -}}
+
+<div>
+  <button class="accordion-title">{{$title}}</button>
+  <div class="accordion-panel">
+    <p>{{ .Inner | safeHTML }}</p>
+  </div>
+</div>
